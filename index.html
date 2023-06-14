@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./public/polygon.svg" />
+    <title>Canvas Drawing</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+    <div id="top-bar">
+        <h1 id="canvasType">Canvas</h1>
+        <div id='right-section'>
+            <label>Canvas Color:</label>
+            <input onInput="canvasColor = this.value" type="color" id='canvasColorPicker' class="color-picker" />
+            <button type="button" class='button' onClick='copToClip()'>
+                Copy to Clipboard!
+            </button>
+        </div>
+    </div>
+
+    <div class="field">
+        <div id="canvasContainer">
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <div class="toolbar">
+            <!-- undo and clear button -->
+            <button onClick="undo()" type="button" class="button">Undo</button>
+            <button onClick="clearCanvas()" type="button" class="button">
+                Clear
+            </button>
+
+            <!-- rgb colors -->
+            <div onClick="change_color(this)" class="color-field" style="background: red"></div>
+            <div onClick="change_color(this)" class="color-field" style="background: blue"></div>
+            <div onClick="change_color(this)" class="color-field" style="background: green"></div>
+
+            <!-- color palette for drawing -->
+            <input onInput="drawColor = this.value" type="color" class="color-picker" />
+
+            <div class='var-box'>
+                <!-- delay -->
+                <label for="delay">spacing</label>
+                <input onInput="drawDelay= this.value" type="range" min="1" max="10" value="2" id='delay' />
+            </div>
+
+            <div class="var-box">
+                <!-- num sides -->
+                <label for="numSides"># of sides</label>
+                <input onInput="numSides = this.value" type="range" min="2" max="15" value="5" id="numSides" />
+            </div>
+            <div class="var-box">
+                <!-- radius -->
+                <label for='radius'>radius</label>
+                <input onInput="global_radius = this.value" type="range" min="10" max="100" value="50" id="radius" />
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="polygon.js"></script>
+</body>
+
+</html>

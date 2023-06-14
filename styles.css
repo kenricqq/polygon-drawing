@@ -1,0 +1,97 @@
+:root {
+  --font-color: rgb(179, 39, 39);
+}
+
+body {
+  margin: 0px;
+  padding: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  overflow: hidden;
+  background-color: rgb(22, 23, 37);
+  color: var(--font-color);
+}
+
+canvas {
+  box-shadow: -3px 2px 9px 6px black;
+  cursor: pointer;
+}
+
+p {
+  color: white;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.toolbar .color-field {
+  height: 40px;
+  width: 40px;
+  min-height: 40px;
+  min-width: 40px;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 3px solid var(--font-color);
+  align-self: center;
+}
+
+.button {
+  align-self: center;
+  width: 100px;
+  height: 40px;
+  border: 3px solid var(--font-color);
+  border-radius: 10px;
+  cursor: pointer;
+  background: #222;
+  font-weight: bold;
+}
+
+#right-section .button {
+  width: 150px;
+}
+
+.color-picker {
+  align-self: center;
+  height: 40px;
+  width: 40px;
+  color: white;
+}
+
+.var-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+#top-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#right-section {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  top: 7px;
+}
+
+#right-section {
+  .color-picker {
+    position: relative;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 20px;
+    top: 5px;
+  }
+}
