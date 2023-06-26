@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <link rel="icon" type="image/svg+xml" href="./public/polygon.svg" />
     <title>Canvas Drawing</title>
     <link rel="stylesheet" href="styles.css" type="text/css" />
@@ -46,7 +45,7 @@
             <div class='var-box'>
                 <!-- delay -->
                 <label for="delay">spacing</label>
-                <input onInput="drawDelay= this.value" type="range" min="1" max="10" value="2" id='delay' />
+                <input onInput="drawDelay= this.value" type="range" min="1" max="10" value="3" id='delay' />
             </div>
 
             <div class="var-box">
@@ -56,7 +55,7 @@
             </div>
             <div class="var-box">
                 <!-- radius -->
-                <label for='radius'>radius</label>
+                <label for='radius'>size</label>
                 <input onInput="global_radius = this.value" type="range" min="10" max="100" value="50" id="radius" />
             </div>
         </div>
