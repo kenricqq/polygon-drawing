@@ -7,12 +7,13 @@ let global_radius = 50
 let drawDelay = 2
 
 // canvas setup
-let ctx = canvas.getContext('2d')
-let canvasColor = '#f7eee9'
+let ctx = canvas.getContext('2d', { willReadFrequently: true })
+// let canvasColor = '#f7eee9'
+let canvasColor = '#000000'
 ctx.fillStyle = canvasColor
 ctx.fillRect(0, 0, canvas.width, canvas.height)
 let rotateBy = 0 // range: [0, 360), convert to radians
-let drawColor = 'black'
+let drawColor = 'red'
 let isDrawing = false
 let restoreArray = []
 let index = -1
@@ -147,7 +148,7 @@ window.addEventListener('resize', () => {
   const canvasContainer = document.getElementById('canvasContainer')
 
   const newCanvas = document.createElement('canvas')
-  const newContext = newCanvas.getContext('2d')
+  const newContext = newCanvas.getContext('2d', { willReadFrequently: true })
   newCanvas.width = window.innerWidth - 60
   newCanvas.height = 500
   newContext.fillStyle = canvasColor
